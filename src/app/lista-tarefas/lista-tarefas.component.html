@@ -49,6 +49,7 @@
     <div class="botoes-form">
       <button
         (click)="salvarTarefa()"
+        [@formButton]="formulario.valid ? 'valid' : 'invalid' "
         class="botao-form"
         [ngClass]="habilitarBotao()"
         [disabled]="!formulario.valid">
