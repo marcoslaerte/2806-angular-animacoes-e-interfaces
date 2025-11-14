@@ -4,7 +4,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { TarefaService } from 'src/app/service/tarefa.service';
 import { Tarefa } from '../interface/tarefa';
-import { checkButtonTrigger, highlightedStateTrigger, shownStateTrigger } from '../animations';
+import { checkButtonTrigger, filterTrgger, highlightedStateTrigger, shownStateTrigger } from '../animations';
 
 @Component({
   selector: 'app-lista-tarefas',
@@ -13,7 +13,8 @@ import { checkButtonTrigger, highlightedStateTrigger, shownStateTrigger } from '
   animations: [
     highlightedStateTrigger,
     shownStateTrigger,
-    checkButtonTrigger
+    checkButtonTrigger,
+    filterTrgger
   ]
 })
 export class ListaTarefasComponent implements OnInit {
