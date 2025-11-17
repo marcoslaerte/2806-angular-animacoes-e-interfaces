@@ -22,7 +22,7 @@ import { checkButtonTrigger, filterTrgger, flyInOutTrigger, formButtonTrigger, h
 })
 export class ListaTarefasComponent implements OnInit {
   listaTarefas: Tarefa[] = [];
-  formAberto: boolean = true;
+  formAberto: boolean = false;
   categoria: string = '';
   validado: boolean = false;
   indexTarefa: number = -1;
