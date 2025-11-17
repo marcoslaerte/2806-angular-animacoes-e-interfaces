@@ -121,10 +121,18 @@ export const flyInOutTrigger = trigger('flyInOut', [
 
 export const shakeTrigger = trigger('shakeAnimation', [
   transition('* => *', [
-    query('input.ng-invalid:focus, select.ng-invalid:focus', [
-      animate('0.5s', style({
-        border: '4px solid solid red'
-      }))
+    query('input.ng-invalid:focus, select.ng-invalid:focus', [ // /* :self dentro entre seletores do query irá tremer formulário também" */
+      animate('0.5s', keyframes([
+        style({ border: '2px solid solid red' }),
+        style({ transform: 'translateX(-10px)' }),
+        style({ transform: 'translateX(10px)' }),
+        style({ transform: 'translateX(-10px)' }),
+        style({ transform: 'translateX(10px)' }),
+        style({ transform: 'translateX(-10px)' }),
+        style({ transform: 'translateX(10px)' }),
+        style({ transform: 'translateX(-10px)' }),
+        style({ transform: 'translateX(0)' })
+      ]))
     ])
   ])
 ])
